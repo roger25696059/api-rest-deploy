@@ -19,7 +19,7 @@
 
     </style>
     <script type="module">
-        fetch("http://localhost:1234/movies")
+        fetch("https://api-rest-deploy-h5ih.onrender.com/movies")
         .then(response => response.json())
         .then(movies => {
             const html = movies.map(movie => {
@@ -40,7 +40,7 @@
                 const id = article.dataset.id
 
 
-                fetch(`http://localhost:1234/movies/${id}`, {
+                fetch(`https://api-rest-deploy-h5ih.onrender.com/movies/${id}`, {
                     method: "DELETE"
                 })
                 .then(res => {
